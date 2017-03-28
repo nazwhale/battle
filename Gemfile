@@ -2,5 +2,5 @@
 source "https://rubygems.org"
 gem 'rspec'
 gem 'sinatra', :github => "sinatra/sinatra"
-
+gem 'capybara'
 # gem "rails"

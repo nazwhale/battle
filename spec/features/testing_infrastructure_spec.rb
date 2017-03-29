@@ -6,6 +6,6 @@ require_relative '../../app'
         fill_in :player_1, with: 'Alex'
         fill_in :player_2, with: 'Naz'
         click_button 'Submit Player Names'
-      expect(page).to have_content("Player 1: Alex\nPlayer 2: Naz")
+      expect(page).to have_content("Alex the Hippy with Naz the Hippy")
     end
 end

@@ -1,5 +1,6 @@
 require 'sinatra/base'
 require './lib/player'
+require './lib/game'
 
 class Battle < Sinatra::Base
 
@@ -26,7 +27,8 @@ enable :sessions
   get '/validate' do
     @player_1 = $player_1 
     @player_2 = $player_2 
-    @player_2.increase_hp
+    game = Game.new(@player_1, @player_2)
+    game.validate(@player_2)
     erb :validate
   end
   run! if app_file == $0

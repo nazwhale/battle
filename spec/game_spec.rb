@@ -19,4 +19,6 @@ describe Game do
     expect(game.healer).to eq "Will"
     expect(game.receiver).to eq "Naz"
   end
+
+  it
 end

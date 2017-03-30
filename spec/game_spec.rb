@@ -20,5 +20,4 @@ describe Game do
     expect(game.receiver).to eq "Naz"
   end
 
-  it
 end

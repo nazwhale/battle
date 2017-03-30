@@ -19,4 +19,14 @@ class Game
   def validate(player)
     player.increase_hp
   end
+  
+  def winner
+    healer.won ? healer : receiver
+  end
+
+  private
+
+  def finished?
+    healer.won || receiver.won
+  end
 end

@@ -24,7 +24,6 @@ enable :sessions
   end
 
   get '/validate' do
-    @player_2 = session[:player_2]
     erb :validate
   end
   run! if app_file == $0

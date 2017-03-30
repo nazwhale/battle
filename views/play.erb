@@ -1,7 +1,7 @@
 
-<h2><%= @player_1.name %> the Hippy with <%= @player_2.name %> the Hippy</h2>
-<h3><%= @player_1.name %>'s HP: 1</h3>
-<h3><%= @player_2.name %>'s HP: 1</h3>
+<h2><%= @game.healer.name %> the Hippy with <%= @game.receiver.name %> the Hippy</h2>
+<h3><%= @game.healer.name %>'s HP: 1</h3>
+<h3><%= @game.receiver.name %>'s HP: 1</h3>
 <form action="/validate">
   <input type="submit" value="Validate" />
 </form>

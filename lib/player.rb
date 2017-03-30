@@ -9,7 +9,7 @@ class Player
   
   def increase_hp
     self.hp += 10
-  end
+  end 
 
   private
 

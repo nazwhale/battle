@@ -5,12 +5,18 @@ describe Game do
   let(:player) {double(:player)}
 
   it 'initializes game with 2 players' do
-    expect(game.player_1).to eq "Naz"
-    expect(game.player_2).to eq "Will"
+    expect(game.healer).to eq "Naz"
+    expect(game.receiver).to eq "Will"
   end
 
   it 'checks validate method calls increase_hp' do
     expect(player).to receive(:increase_hp)
     game.validate(player)
+  end
+
+  it 'switches healer to receiver and visa versa' do
+    game.switch_players
+    expect(game.healer).to eq "Will"
+    expect(game.receiver).to eq "Naz"
   end
 end

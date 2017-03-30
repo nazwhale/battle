@@ -25,6 +25,7 @@ enable :sessions
   get '/validate' do
     @game = $game
     @game.validate(@game.receiver)
+    @game.switch_players
     erb :validate
   end
   run! if app_file == $0

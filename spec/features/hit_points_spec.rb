@@ -13,6 +13,13 @@ feature 'changes HP' do
     click_button 'Validate'
     expect(page).to have_content("Naz's HP: 11")
   end
+  
+  scenario 'displays player 2s HP as higher after validation' do
+    sign_in_and_play
+    click_button 'Validate'
+    click_button 'Sweet dude'
+    expect(page).to have_content("Naz's HP: 11")
+  end
 end
 
 
